@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div>
+      <h2>Submitted Information</h2>
+      <p>Name: <%= result.name %></p>
+      <p>Dojo Location: <%= result.city %></p>
+      <p>Favorite Language: <%= result.language %></p>
+      <p>Comment: <%= result.comment %> </p>
+    </div>
+    <form action='/button_back' method='post'>
+       <input type="submit" name="submit" value="Go Back">
+    </form>
+  </body>
+</html>
