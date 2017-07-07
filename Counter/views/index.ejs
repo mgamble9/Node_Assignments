@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter Assignment</title>
+  </head>
+
+  <style type="text/css">
+  *{
+     font-family: sans-serif;
+  }
+
+  #wrapper {
+     margin: 10px auto;
+     margin-top: 30px;
+     background-color: lightblue;
+     width: 600px;
+   }
+   h1, p , input{
+     text-align: center;
+     margin: 20px;
+     /*align-items: center;*/
+   }
+   </style>
+ </head>
+  <body>
+    <div id="wrapper">
+      <h1>Counter</h1>
+      <br>
+      <p><%= count %> times</p>
+      <br>
+      <form action='/button_plus2' method='post'>
+        <input type="submit" name="add_2_button" value="add 2 to counter">
+      </form>
+      <form action='/button_reset' method='post'>
+        <input type="submit" name="reset" value="reset counter">
+      </form>
+    </div>
+
+  </body>
+</html>
