@@ -1,0 +1,40 @@
+#wrapper {
+  margin: auto;
+  margin-top: 30px;
+  background-color: lightblue;
+  width: 600px;
+  text-align: center;
+}
+#top_header{
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#no_div {
+  margin: 0px;
+}
+
+#right_answer_div {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+}
+
+#wrong_answer_div {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  background-color: red;
+  text-align: center;
+}
+
+#form_block {
+  align-items: center;
+}
+
+#form_block input {
+  width:40px;
+}

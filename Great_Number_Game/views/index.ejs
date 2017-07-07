@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Great Number Game</title>
+    <link href="mystyles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="top_header">
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+      </div>
+      <div id="result_block">
+        <%- result_box_str %>
+      </div>
+      <div id="form_block">
+        <form action='/submit_guess' method = 'post'>
+          input integer from 1 to 100:<input type="number" name="guess">
+        </form>
+      </div>
+  </body>
+</html>
