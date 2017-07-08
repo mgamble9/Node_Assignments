@@ -3,6 +3,7 @@
   margin-top: 30px;
   background-color: lightblue;
   width: 600px;
+  height: 300px;
   text-align: center;
 }
 #top_header{
@@ -16,8 +17,10 @@
 }
 
 #right_answer_div {
+  position: relative;
   width: 400px;
   height: 100px;
+  top: 40px;
   margin: auto;
   background-color: green;
   text-align: center;

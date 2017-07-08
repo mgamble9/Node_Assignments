@@ -13,6 +13,7 @@ app.get('/', function(req, res) {
   if (!req.session.result_box_str) {
     result_box_str = "<div id=\"no_div\"></div>";
     req.session.answer = Math.floor(Math.random()*101);
+    console.log("DON'T look here at the answer!!! " + req.session.answer)
   }
   else {
     result_box_str = req.session.result_box_str;
@@ -22,7 +23,7 @@ app.get('/', function(req, res) {
 
 app.post('/submit_guess', function(req, res) {
  console.log("POST DATA", req.body);
- guess = req.body.guess;
+ let guess = req.body.guess;
 
  // below is my clugy way for stopping the thing from breaking
  // if the user tries entering another number when the game has
@@ -31,6 +32,7 @@ app.post('/submit_guess', function(req, res) {
  if (!req.session.answer) {
    res.redirect('/');
  }
+
  if (!guess || guess < 1 || guess > 100) {
    result_box_str = '<div id="wrong_answer_div"><h1>Your number must be between 1 and 100!</h1></div>';
    console.log(result_box_str);
