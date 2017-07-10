@@ -1,0 +1,6 @@
+div#chatBoard {
+  height: 300px;
+  width: 400px;
+  overflow: scroll;
+  background-color: lightblue;
+}
