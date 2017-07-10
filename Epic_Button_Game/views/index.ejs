@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+    // $(document).ready(function (){
+      $(document).ready(() => {
+        // this triggers the connection event in our server!
+        var socket  = io.connect();
+        // we'll write all the socket stuff after the above line!
+
+        $('#epic_button').click(function(){
+          console.log("clicked epic button");
+          socket.emit("epic_button");
+        });
+
+        $('#reset_button').click(function(){
+          console.log("clicked reset button");
+          socket.emit("reset_button");
+        });
+
+        socket.on('count', function(data){
+          console.log( 'The server says: '  + data.clicks);
+          $("#click_count").text(data.clicks);
+        });
+
+    })
+    </script>
+  </head>
+  <body>
+    <h3 id="click_count"></h3>
+    <div>
+      <button id="epic_button">Push the epic button</button>
+      <button id="reset_button">Reset count</button>
+    </div>
+  </body>
+</html>
